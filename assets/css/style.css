@@ -1,0 +1,182 @@
+body {
+    background: #000;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* site logo animation */
+.site-title {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 100;
+}
+
+.site-title .logo {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(../img/download1.svg);
+    width: 100px;
+    height: 40px;
+}
+
+.site-title .logo,
+.site-title:after {
+    transition: 0.5s;
+}
+
+.hide {
+    display: none;
+}
+
+.site-title:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transform: translate3d(50%, 0, 0);
+    background-repeat: no-repeat;
+    background-image: url(../img/download.svg);
+    width: 100px;
+    height: 40px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.site-title:hover .logo {
+    transform: translate3d(-50%, 0, 0);
+    opacity: 0;
+}
+
+.site-title:hover:after {
+    visibility: visible;
+    opacity: 1;
+    transform: translateZ(0);
+}
+
+/*End site logo animation */
+
+
+
+
+
+
+
+
+/*End css Testimonials Slider  */
+.testimonial {
+    position: relative;
+}
+
+.testimonial-slider {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-gap: 40px;
+    position: relative;
+    padding: 50px 0;
+}
+
+.client-information {
+    flex-direction: column;
+    z-index: 10;
+}
+
+.client-name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    position: relative;
+    color: #1E2B3F;
+}
+
+.client-name::before {
+    position: absolute;
+    content: "";
+    left: -22px;
+    background-color: #0F86F2;
+    width: 20px;
+    height: 2px;
+    top: 13px;
+}
+
+.testimonial-slider::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -16%;
+    background: #ffffff;
+    width: calc(100% - 150px);
+    height: 420px;
+    box-shadow: 0px 0px 50px rgb(0 0 0 / 5%);
+    z-index: -1;
+}
+
+
+.description {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #576379;
+}
+
+.client-img-box {
+    position: relative;
+}
+
+.client-img-box::after {
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    background-image: url(../img/va-shap.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    content: "";
+    z-index: -1;
+}
+
+.is-shadow {
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+}
+
+.slider-nav img {
+    width: auto !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 50px;
+    border: none;
+    background: transparent;
+    height: 0;
+    text-indent: 0
+}
+
+@media (min-width: 768px) {
+    .carosel-nav .carousel-indicators {
+        position: absolute;
+        left: calc(-50% - 50%);
+        top: 0;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+    }
+}
+
+.carousel-control-next {
+    right: -5%;
+    left: auto;
+}
+
+.carousel-control-prev {
+    z-index: 10;
+    left: -5%;
+}
+
+/*End css Testimonials Slider  */
+
+
+/*  menu */
+.menu{
+    background: rgba(57, 107, 165, .5);
+}
+
+
